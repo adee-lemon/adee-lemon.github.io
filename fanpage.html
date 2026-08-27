@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wang Yuwen - Fan Page</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Hero Section -->
+    <header>
+        <div class="header-container">
+            <h1>Welcome to Wang Yuwen's Fan Page!</h1>
+            <img src="https://n.sinaimg.cn/sinakd20260809ac/407/w517h690/20260809/1a16-aec781a20cbecad24a943e16b6c17f14.jpg" alt="Wang Yuwen portrait" class="profile-img">
+
+            <nav>
+                <a href="#bio">Bio</a>
+                <a href="#funfacts">Fun Facts</a>
+                <a href="#dramasearch">Drama Search</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Bio Section -->
+        <section id="bio">
+            <h2>Bio</h2>
+            <div class="bio-details">
+                <p><strong>Date of Birth:</strong> 28 May 1997</p>
+                <p><strong>Gender:</strong> Female</p>
+                <p><strong>Height:</strong> 172 cm</p>
+                <p><strong>Birthplace:</strong> Wuhan, Hubei, China</p>
+            </div>
+            <p class="bio-summary">
+                Wang Yuwen (Chinese: 王玉雯; born 28 May 1997) is a Chinese actress. A graduate of the Beijing Dance Academy, she is acclaimed for her standout performance in the Golden Horse Award-winning film <em>An Elephant Sitting Still</em> (2018), along with hit romantic television series such as <em>Once We Get Married</em> (2021) and <em>The Love You Give Me</em> (2023).
+            </p>
+        </section>
+
+        <!-- 2. Fun Facts Section -->
+        <section id="funfacts">
+            <h2>Fun Facts About Wang Yuwen</h2>
+            <ol class="facts-list">
+                <li>Before acting, she spent years training in classical and ethnic folk dance at the elite Beijing Dance Academy.</li>
+                <li>She is a skilled pianist and plays classical pieces during filming breaks.</li>
+                <li>She frequently carries vintage film cameras on set to capture candid behind-the-scenes moments.</li>
+            </ol>
+        </section>
+
+        <!-- 3. Drama Search Section -->
+        <section id="dramasearch">
+            <h2>Drama Search</h2>
+            
+            <!-- Genre Filter Controls -->
+            <div class="filter-group">
+                <p class="filter-title">Genre</p>
+                <div class="checkbox-container">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="genre" id="romance" value="romance">
+                        <span>💕 Romance</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="genre" id="modern" value="modern">
+                        <span>🏙️ Modern</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="genre" id="historical" value="historical">
+                        <span>📜 Historical</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="genre" id="fantasy" value="fantasy">
+                        <span>🔮 Fantasy</span>
+                    </label>
+
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="genre" id="martialarts" value="martialarts">
+                        <span>⚔️ Martial Arts</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Douban Rating Pills -->
+            <div class="filter-group">
+                <p class="filter-title">Douban Rating</p>
+                <div class="pill-group">
+                    <button type="button" class="pill active" onclick="filterByPill('all', this)">✨ Anything</button>
+                    <button type="button" class="pill" onclick="filterByPill(9.0, this)">🏆 ≥ 9.0</button>
+                    <button type="button" class="pill" onclick="filterByPill(8.0, this)">🔥 ≥ 8.0</button>
+                    <button type="button" class="pill" onclick="filterByPill(7.0, this)">🌟 ≥ 7.0</button>
+                    <button type="button" class="pill" onclick="filterByPill(6.0, this)">🎬 ≥ 6.0</button>
+                    <button type="button" class="pill" onclick="filterByPill(5.0, this)">📺 ≥ 5.0</button>
+                </div>
+            </div>
+
+            <!-- Search Action Button -->
+            <p><button type="button" class="btn-search" onclick="performSearch()">Search Dramas</button></p>
+
+            <!-- Target Output Placeholder -->
+            <div id="searchResults" class="results-grid"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Thanks for reading! Follow her on her official <a href="https://www.instagram.com/u.vinwang/?hl=en" target="_blank" rel="noopener noreferrer">Instagram page</a>.</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="drama.js"></script>
+</body>
+</html>

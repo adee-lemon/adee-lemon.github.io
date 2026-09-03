@@ -3,11 +3,16 @@
 
 /* 0) Base page */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: aliceblue;
-    color: green;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* 1) Container */
@@ -18,53 +23,96 @@ body {
 }
 
 /* 2) Section heading */
-.site-header h1{
+
+.site-header {
     text-align: left;
-    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.site-header h1 {
+    font-size: 36px;
+    margin: 0 0 6px 0;
+    color: #0f172a;
 }
 
 .tagline {
-    text-align: left;
-    font-size: 10px
+    font-style: italic;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.attractions h2 {
+    font-size: 26px;
+    text-align: center;
+    margin: 30px 0 20px;
+    color: #0f172a;
 }
 
 /* 3) Cards wrapper (center all cards horizontally) */
-.attractions {
-    margin: auto;
-    width: 20px;
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
 }
-
-
 
 /* 4) Card (size, spacing, border, rounded corners) */
 
-.cards {
-    width: 10px;
-    margin: auto;
-    border: 2px solid grey;
-    border-radius: 10%;
+.card {
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: border-color 0.2s ease;
 }
 
 /* 5) Card text (h3 title, paragraph blurb) */
 h3 {
+    font-size: 18px;
     font-weight: bold;
+    margin: 14px 14px 6px;
+    color: #0f172a;
     text-align: left;
 }
 
 .blurb {
+    font-size: 13px;
+    line-height: 1.5;
     text-align: left;
-    color: grey
+    color: #64748b;
+    margin: 0 14px 14px;
 }
 
 /* 6) Card image (fit within card, centered) */
-.card {
-    margin:auto;
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* 7) Hover state: change border to green, then make it wigglew */
-.cards:hover {
-    color: green;
 
+@keyframes wiggle {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-3deg); }
+    50%  { transform: rotate(3deg); }
+    75%  { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.card:hover {
+    border-color: red;
+    animation: wiggle 0.4s ease-in-out;
+    cursor: pointer;
 }
 
 /* 8) Footer */
@@ -73,5 +121,10 @@ h3 {
     padding-top: 10px;
     text-align: center;
     padding-bottom: 30px;
+}
 
+.site-footer p {
+    margin: auto;
+    font-size: 12px;
+    color: #94a3b8;
 }

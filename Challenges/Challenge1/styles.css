@@ -1,20 +1,21 @@
 /* styles.css - Challenge #1 (Skeleton) */
-* {
+body {
     font-family:'Times New Roman', Times, serif;
     background-color: #edffed;
     color: rgb(41, 95, 177);
-    margin:auto;
+    margin: auto;
 }
 
 .container {
-    margin:auto;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
     padding: 10px;
 }
 
 h1 {
     font-size: 50px;
     font-weight: bold;
-    text-align: center;
     color: rgb(241, 69, 170);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -27,7 +28,6 @@ h1 {
     display: block;
     font-style: italic;
     color: rgb(175, 81, 117);
-    text-align: center;
 }
 
 /* .hero {
@@ -37,7 +37,6 @@ h1 {
 
 .mascot-placeholder {
     width:200px;
-    text-align: center;
     margin:auto;
 
 }
@@ -97,4 +96,8 @@ p {
     text-align: center;
     padding-top: 15px;
     border-top: 1px solid rgb(186, 88, 166)
+}
+
+.site-footer p {
+    text-align: center;
 }

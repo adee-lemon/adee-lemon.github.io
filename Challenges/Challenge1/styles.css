@@ -1,0 +1,100 @@
+/* styles.css - Challenge #1 (Skeleton) */
+* {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #edffed;
+    color: rgb(41, 95, 177);
+    margin:auto;
+}
+
+.container {
+    margin:auto;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(241, 69, 170);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.park-name {
+    color: rgb(241, 69, 170);
+}
+
+.tagline {
+    display: block;
+    font-style: italic;
+    color: rgb(175, 81, 117);
+    text-align: center;
+}
+
+/* .hero {
+    display: flex;
+    justify-content: center;
+} */
+
+.mascot-placeholder {
+    width:200px;
+    text-align: center;
+    margin:auto;
+
+}
+
+#mascot-image {
+    border: 2px black solid;
+    border-radius: 10%;
+    width: 100%;
+        /* margin: auto; */
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: left;
+    line-height: 0.8cm;
+}
+
+.actions {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.buy-tickets {
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 10%;
+    /* border: rgba(254, 250, 12, 0.2) 10px solid; */
+    box-shadow: 0 0 15px rgb(147, 147, 218);
+}
+
+.buy-tickets:hover {
+    color: rgb(202, 198, 198);
+}
+
+.make-donation {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10%;
+    box-shadow: 0 0 15px rgb(235, 126, 235);
+}
+
+.make-donation:hover {
+    color: rgb(202, 198, 198);
+}
+
+.container {
+    text-align: center;
+}
+
+.site-footer {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgb(186, 88, 166)
+}

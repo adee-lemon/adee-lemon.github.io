@@ -1,0 +1,77 @@
+/* styles.css - Challenge #2 (Skeleton: Rides Gallery) */
+
+
+/* 0) Base page */
+
+body {
+    background-color: aliceblue;
+    color: green;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* 1) Container */
+.container {
+    max-width: 900px;
+    padding: 20px;
+    margin: auto;
+}
+
+/* 2) Section heading */
+.site-header h1{
+    text-align: left;
+    font-size: 30px;
+}
+
+.tagline {
+    text-align: left;
+    font-size: 10px
+}
+
+/* 3) Cards wrapper (center all cards horizontally) */
+.attractions {
+    margin: auto;
+    width: 20px;
+}
+
+
+
+/* 4) Card (size, spacing, border, rounded corners) */
+
+.cards {
+    width: 10px;
+    margin: auto;
+    border: 2px solid grey;
+    border-radius: 10%;
+}
+
+/* 5) Card text (h3 title, paragraph blurb) */
+h3 {
+    font-weight: bold;
+    text-align: left;
+}
+
+.blurb {
+    text-align: left;
+    color: grey
+}
+
+/* 6) Card image (fit within card, centered) */
+.card {
+    margin:auto;
+}
+
+/* 7) Hover state: change border to green, then make it wigglew */
+.cards:hover {
+    color: green;
+
+}
+
+/* 8) Footer */
+.site-footer {
+    border-top: 1px solid black;
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 30px;
+
+}

@@ -2,67 +2,99 @@
 <html lang="en">
 <head>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">  
+    
     <style>
 
+        :root {
+            --matcha-bg: rgb(233, 251, 233);
+            --matcha-dark: rgb(2, 86, 2);
+            --strawberry-pink: rgb(255, 139, 159);
+            --strawberry-hover: #e57286;
+        }
+
         body {
-            background-color: rgb(233, 251, 233);
+            background-color: var(--matcha-bg);
             font-family:Georgia, 'Times New Roman', Times, serif;
-            color: rgb(2, 86, 2);
+            color: var(--matcha-dark);
             align-items: center;
         }
 
-        h3 {
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            text-align: center;
-            color: rgb(255, 139, 159);
-            font-size: 1.5em;
+        .custom-navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid var(--strawberry-pink);
+        }
+        .navbar-brand, .nav-link {
+            color: var(--matcha-dark) !important;
+            font-weight: bold;
+        }
+        .nav-link:hover {
+            color: var(--strawberry-pink) !important;
         }
 
-        .photo {
-            text-align: center;
+        h2, h3 {
+            color: var(--strawberry-pink);
+            font-weight: bold;
         }
 
-        img {
-            width: 250px;
-            height: 250px;
+        .theme-card {
+            background-color: #ffffff;
+            border: 2px solid var(--strawberry-pink);
+            border-radius: 16px;
+            width: fit-content;
+            margin: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .theme-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(255, 139, 159, 0.25) !important;
+        }
+
+        .cat-photo {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
             border-radius: 50%;
-            box-shadow: 0px 4px 14px rgb(222, 18, 52);
+            border: 4px solid var(--strawberry-pink);
+            box-shadow: 0 4px 14px rgba(222, 18, 52, 0.2);
+            cursor: pointer;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+        }
+        .cat-photo:hover {
+            transform: translateY(-6px) scale(1.05) rotate(8deg);
+            box-shadow: 0 12px 24px rgba(222, 18, 52, 0.35);
+        }
+        .cat-photo:active {
+            transform: scale(0.9);
         }
 
-        img:hover {
-            transform: rotate(10deg);
-        }
-
-        img:active {
-            transform: scale(0.8);
-        }
-
-        .video {
-            text-align: center;
-        }
-
-        .video iframe {
-            position: relative;
-            size: 100%;
+        .ratio iframe {
             background-color: rgb(243, 187, 203);
-            padding: 10px;
-            margin-bottom: 50px;
+            border-radius: 12px;
+            padding: 8px;
+            transition: background-color 0.25s ease;
         }
-
-        .video iframe:hover {
+        .ratio iframe:hover {
             background-color: rgb(184, 115, 126);
         }
 
-        .biography {
-            width: fit-content;
-            background-color: rgb(157, 235, 157);
-            padding: 5px;
-            text-align: center;
+        .btn-strawberry {
+            background-color: var(--strawberry-pink);
+            color: #ffffff;
+            font-weight: bold;
+            border: none;
+            transition: background-color 0.2s ease, transform 0.15s ease;
+        }
+        .btn-strawberry:hover {
+            background-color: var(--strawberry-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
         }
 
-        p {
-            font-style: italic;
-            font-size: 16px;
+        .custom-alert {
+            background-color: #ffffff;
+            border: 1.5px solid var(--strawberry-pink);
+            color: var(--matcha-dark);
         }
 
     </style>
@@ -70,21 +102,79 @@
 </head>
 <body>
 
-    <section class="photo">
-        <h3>Cute photo of a cat in swag hoodie</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScWpvWOfUOOuflDycBItZ0fzwA_zx44fbxDBIDKGbIPSTsUMyLqRAXD3Y&s=10" alt="Cat in frog hoodie">
-    </section>
-
-    <section class="video">
-        <h3>Favorite travel destination!!!</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FY3KdoXNd2U?si=FnfxX9OfNmmt6hRa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-
-    <section class="biography">
-        <div>
-            <p>Hello! I love cats and music. The color code of this website is strawberry matcha.</p>
+    <nav class="navbar navbar-expand-lg custom-navbar shadow-sm mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🍵 Strawberry Matcha Space</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navContent">
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item"><a class="nav-link active" href="#photo-section">Photo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video-section">Travel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bio-section">About</a></li>
+                </ul>
+            </div>
         </div>
-    </section>
+    </nav>
+
+    <main class="container mb-5" style="max-width: 720px;"></main>
+
+        <div class="alert custom-alert d-flex align-items-center justify-content-between rounded-4 shadow-sm mb-4" role="alert">
+            <div>
+                <strong>Welcome!</strong> Explore my personal page styled in fresh strawberry matcha.
+            </div>
+            <span class="badge rounded-pill" style="background-color: var(--strawberry-pink);">Featured</span>
+        </div>
+
+        <section id="photo-section" class="card theme-card shadow-sm p-4 text-center mb-4">
+            <h3>Cute photo of a cat in swag hoodie</h3>
+            <div class="my-3">
+                <img class="cat-photo mx-auto d-block" 
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScWpvWOfUOOuflDycBItZ0fzwA_zx44fbxDBIDKGbIPSTsUMyLqRAXD3Y&s=10" 
+                        alt="Cat in frog hoodie">
+            </div>
+            <p class="text-muted fst-italic mb-0 small">Hover over the cat to see it wiggle!</p>
+        </section>
+
+        <section id="video-section" class="card theme-card shadow-sm p-4 text-center mb-4">
+            <h3>Favorite travel destination!!!</h3>
+            <div class="ratio ratio-16x9 my-3">
+                <iframe src="https://www.youtube.com/embed/FY3KdoXNd2U?autoplay=1&mute=1&loop=1&playlist=FY3KdoXNd2U" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section id="bio-section" class="card theme-card shadow-sm p-4 text-center mb-4">
+            <h3>About Me</h3>
+            <div class="p-3 mx-auto my-2 rounded-3" style="background-color: var(--matcha-bg); border: 2px dotted var(--matcha-dark); width: fit-content;">
+                <p class="fst-italic mb-0 fs-5">Hello! I love cats and music. The color code of this website is strawberry matcha.</p>
+            </div>
+
+            <div class="mt-3">
+                <button class="btn btn-strawberry px-4 py-2 rounded-pill shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#moreDetails" aria-expanded="false" aria-controls="moreDetails">
+                    More Facts About Me ✨
+                </button>
+            </div>
+
+            <div class="collapse mt-3" id="moreDetails">
+                <div class="card card-body border-0 rounded-3 text-start mx-auto" style="background-color: #f7fdf8; max-width: 500px;">
+                    <ul class="mb-0 ps-3">
+                        <li class="mb-1"><strong>Major:</strong> Information Systems (IS216)</li>
+                        <li class="mb-1"><strong>Passions:</strong> Web design, cats, and acoustic playlists</li>
+                        <li><strong>Vibe:</strong> Soft pastel aesthetic with strawberry matcha energy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
